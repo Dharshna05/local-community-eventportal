@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Event Portal</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+body { background-color: #f4f4f4; }
+#welcomeBanner {
+  background-color: #1a73e8;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+
+.highlight {
+  background: yellow;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+</style>
+</head>
+
+<body>
+
+
+<nav id="mainNav">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#events">Events</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#register">Register</a>
+  <a href="#feedback">Feedback</a>
+  <a href="#contact">Contact</a>
+  <a href="help.html" target="_blank">Help</a>
+</nav>
+
+
+<div id="welcomeBanner">
+  Welcome Back to Community Portal!
+  <span style="color:red;font-weight:bold;"> Special Offer Active Today!</span>
+</div>
+
+<h1 id="mainHeader" style="color:#d62828;">Community Event Portal</h1>
+
+
+<section id="home">
+  <h2>🏠 Home</h2>
+  <p>Welcome to your local community hub where residents can explore events, register online, and stay updated with city activities.</p>
+</section>
+<section id="about">
+  <h2>📘 About the Portal</h2>
+
+  <p>
+    The <b>Community Event Portal</b> is designed to connect citizens with local activities,
+    government services, and cultural programs in an easy and interactive way.
+  </p>
+
+  <p>
+    This platform allows residents to <span class="highlight">register for events</span>,
+    check schedules, view locations, and provide feedback instantly.
+  </p>
+
+  <p>
+    Our goal is to build a stronger community by encouraging participation in:
+  </p>
+
+  <ul>
+    <li>🎵 Cultural and Music Events</li>
+    <li>🏥 Health Awareness Camps</li>
+    <li>⚽ Sports and Fitness Activities</li>
+    <li>🎓 Educational Workshops</li>
+    <li>🌳 Environmental Clean-up Drives</li>
+  </ul>
+
+  <p>
+    This portal is developed using HTML5, CSS3, and JavaScript to demonstrate
+    modern web development practices and responsive design principles.
+  </p>
+</section>
+
+<section id="events">
+  <h2>📅 Upcoming Events</h2>
+
+  <div class="eventCard">🎵 Music Festival - July 12 (Live orchestra & DJ night)</div>
+  <div class="eventCard">🏥 Health Camp - July 18 (Free checkup & consultation)</div>
+  <div class="eventCard">⚽ Sports Meet - Aug 2 (District level competitions)</div>
+  <div class="eventCard">🌱 Clean City Drive - Aug 10 (Community volunteering event)</div>
+
+  <table>
+    <tr>
+      <th>Event</th><th>Date</th><th>Venue</th>
+    </tr>
+    <tr>
+      <td>Music</td><td>July 12</td><td>City Park</td>
+    </tr>
+    <tr>
+      <td>Health</td><td>July 18</td><td>Town Hall</td>
+    </tr>
+  </table>
+</section>
+<section id="gallery">
+  <h2>🖼️ Community Gallery</h2>
+
+  <table>
+    <tr>
+      <td><img src="https://picsum.photos/200/150?1" alt="event1" title="Music Event"></td>
+      <td><img src="https://picsum.photos/200/150?2" alt="event2" title="Health Camp"></td>
+      <td><img src="https://picsum.photos/200/150?3" alt="event3" title="Sports Meet"></td>
+    </tr>
+    <tr>
+      <td><img src="https://picsum.photos/200/150?4" alt="event4" title="Workshop"></td>
+      <td><img src="https://picsum.photos/200/150?5" alt="event5" title="Clean Drive"></td>
+      <td><img src="https://picsum.photos/200/150?6" alt="event6" title="Community Meet"></td>
+    </tr>
+  </table>
+</section>
+<section id="register">
+  <h2>📝 Event Registration</h2>
+
+  <input type="text" placeholder="Enter Name" required autofocus>
+  <input type="email" placeholder="Enter Email" required>
+  <input type="date">
+
+  <select onchange="showEventFee(this)">
+    <option>Select Event</option>
+    <option>Music</option>
+    <option>Health</option>
+    <option>Sports</option>
+  </select>
+
+  <textarea placeholder="Message"></textarea>
+
+  <button onclick="submitForm()">Submit</button>
+
+  <output id="confirmOutput"></output>
+</section>
+
+<section id="feedback">
+  <h2>💬 Feedback</h2>
+
+  <textarea onkeyup="countChars(this)" placeholder="Write feedback..."></textarea>
+  <p id="charCount">0</p>
+
+  <button onclick="submitFeedback()">Send Feedback</button>
+</section>
+
+<section id="video">
+  <h2>🎥 Event Promo Video</h2>
+
+  <video controls oncanplay="videoReady()">
+    <source src="promo.mp4" type="video/mp4">
+  </video>
+</section>
+
+<section id="contact">
+  <h2>📞 Contact Us</h2>
+
+  <p>Email: support@communityportal.com</p>
+  <p>Phone: +91 98765 43210</p>
+  <p>Address: City Municipal Office, Main Road</p>
+</section>
+<section id="location">
+  <h2>📍 Find Nearby Events</h2>
+  <button onclick="findLocation()">Find Nearby Events</button>
+  <p id="locationOutput"></p>
+</section>
+
+<section id="preferences">
+  <h2>⚙️ Preferences</h2>
+  <button onclick="clearPrefs()">Clear Preferences</button>
+</section>
+<footer>
+  <p>© 2025 Community Event Portal | Built for Local Citizens</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

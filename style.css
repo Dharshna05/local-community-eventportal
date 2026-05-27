@@ -1,0 +1,187 @@
+/* RESET + BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* NAVIGATION */
+nav {
+  background: #1f2937;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+nav a {
+  color: #fff;
+  margin: 8px 15px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: #3b82f6;
+  transform: scale(1.05);
+}
+
+/* HEADER */
+#mainHeader {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2.2rem;
+  color: #1f2937;
+  letter-spacing: 1px;
+}
+
+/* WELCOME BANNER */
+#welcomeBanner {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* SECTIONS */
+section {
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 1100px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* EVENT CARDS */
+.eventCard {
+  background: #f9fafb;
+  border-left: 5px solid #3b82f6;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.eventCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+th {
+  background: #3b82f6;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background: #f3f4f6;
+}
+
+tr:hover {
+  background: #e0f2fe;
+}
+
+/* IMAGES */
+img {
+  width: 200px;
+  border-radius: 10px;
+  margin: 8px;
+  transition: 0.3s;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* FORM ELEMENTS */
+input, select, textarea {
+  width: 100%;
+  max-width: 400px;
+  margin: 8px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 5px rgba(59,130,246,0.5);
+}
+
+/* BUTTON */
+button {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #1f2937;
+  color: white;
+  margin-top: 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  section {
+    width: 95%;
+  }
+}
